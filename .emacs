@@ -169,3 +169,9 @@
 ;; ===============================================
 ;; faster prev-next frame
 (global-set-key (kbd "M-`") 'other-window)
+
+;; ==============================================
+;; settings of cursor change
+(require 'cursor-chg)
+(change-cursor-mode 1)
+(toggle-cursor-type-when-idle 1)
