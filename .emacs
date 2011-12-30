@@ -1,7 +1,7 @@
 ;; settings of w3m
 ;; ===================================================
 ;; =======Temporary Disabled===========
-(add-to-list 'load-path "~/.emacs.d/emacs-w3m")
+(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/emacs-w3m")
 (setq w3m-use-cookies t)
 (setq w3m-command-arguments '("-cookie" "-F"))
 ;; (setq w3m-display-inline-image t)
@@ -11,7 +11,7 @@
 
 ;; settings of color-theme
 ;; (add-to-list 'load-path "~/elisp")
-;; (add-to-list 'load-path "~/.emacs.d/color-theme/")
+;; (add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/color-theme/")
 ;; (require 'color-theme)
 ;; (setq color-theme-is-global t)
 ;; (color-theme-initialize)
@@ -20,7 +20,7 @@
 ;; settings of auto-complete
 ;; ===================================================
 
-(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/auto-complete")
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
@@ -76,7 +76,7 @@
 
 ;; settings of cc-mode (for C/C++)
 ;; ===================================================
-(add-to-list 'load-path "~/.emacs.d/cc-mode/cc-mode-5.31.3")
+(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/cc-mode/cc-mode-5.31.3")
 (require 'cc-mode)
 
 ;; settings of bind key-shortcut to goto-line command
@@ -84,7 +84,7 @@
 
 ;; settings of CEDET
 ;; ===================================================
-(load-file "~/.emacs.d/cedet/common/cedet.el")
+(load-file "~/repos/emacs-confs/.emacs.d/cedet/common/cedet.el")
 
 ;; enable EDE mode
 (global-ede-mode 1)
@@ -114,14 +114,15 @@
 ;; (put 'upcase-region 'disabled nil)
 
 ;; settings of html-helper-mode
-(add-to-list 'load-path "~/.emacs.d/html-helper-mode")
+(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/html-helper-mode")
 (autoload 'html-helper-mode "html-helper-mode" "Yay HTML" t)
 (setq auto-mode-alist (cons '("\\.html$" . html-helper-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.asp$" . html-helper-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.php$" . html-helper-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.tpl$" . html-mode) auto-mode-alist))
 
-;; load .emacs.d/miscs into path, prepared for single .el file
-(add-to-list 'load-path "~/.emacs.d/miscs")
+;; load repos/emacs-confs/.emacs.d/miscs into path, prepared for single .el file
+(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/miscs")
 
 ;; php-mode
 (require 'php-mode)
@@ -149,7 +150,7 @@
 
 ;; ===============================================
 ;; settings of nxhtml
-;; (load "~/.emacs.d/nxhtml/autostart.el")
+;; (load "~/repos/emacs-confs/.emacs.d/nxhtml/autostart.el")
 ;; (setq mumamo-chunk-coloring 5)
 
 ;; ===============================================
@@ -175,3 +176,4 @@
 (require 'cursor-chg)
 (change-cursor-mode 1)
 (toggle-cursor-type-when-idle 1)
+(put 'downcase-region 'disabled nil)
