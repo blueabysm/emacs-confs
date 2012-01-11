@@ -113,12 +113,12 @@
 ;; (global-linum-mode 1)
 ;; (put 'upcase-region 'disabled nil)
 
-;; settings of html-helper-mode
-(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/html-helper-mode")
-(autoload 'html-helper-mode "html-helper-mode" "Yay HTML" t)
-(setq auto-mode-alist (cons '("\\.html$" . html-helper-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.asp$" . html-helper-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.php$" . html-helper-mode) auto-mode-alist))
+;; settings of html-mode
+;; (add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/html-mode")
+;; (autoload 'html-mode "html-mode" "Yay HTML" t)
+(setq auto-mode-alist (cons '("\\.html$" . html-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.asp$" . html-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.php$" . html-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.tpl$" . html-mode) auto-mode-alist))
 
 ;; load repos/emacs-confs/.emacs.d/miscs into path, prepared for single .el file
@@ -177,3 +177,8 @@
 (change-cursor-mode 1)
 (toggle-cursor-type-when-idle 1)
 (put 'downcase-region 'disabled nil)
+
+;; ===================================================
+;; smooth scroll
+(require 'smooth-scroll)
+(setq scroll-step 1) ;; keyboard scroll one line at a time
