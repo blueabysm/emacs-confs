@@ -122,6 +122,7 @@
 (setq auto-mode-alist (cons '("\\.tpl$" . html-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.pss$" . css-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.pjs$" . javascript-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.json$" . javascript-mode) auto-mode-alist))
 
 ;; load repos/emacs-confs/.emacs.d/miscs into path, prepared for single .el file
 (add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/miscs")
