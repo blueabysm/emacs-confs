@@ -1,1 +1,15 @@
 This repo contains some useful emacs extensions and related settings
+
+Usage:
+1. git clone git@github.com:blueabysm/emacs-confs
+2. add the following alias in your .bashrc
+   
+   alias emacs='emacs -l path/to/emacs-confs/.emacs'
+
+3. run command:
+   
+   source .bashrc
+
+   at your home dir
+
+4. enjoy
