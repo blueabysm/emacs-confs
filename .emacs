@@ -185,3 +185,7 @@
 ;; smooth scroll
 (require 'smooth-scroll)
 (setq scroll-step 1) ;; keyboard scroll one line at a time
+
+;; ===============================================
+;; directory tree
+(autoload 'dirtree "dirtree" "Add directory to tree view" t)
