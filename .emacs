@@ -189,3 +189,4 @@
 ;; ===============================================
 ;; directory tree
 (autoload 'dirtree "dirtree" "Add directory to tree view" t)
+(global-set-key (kbd "C-x d") 'dirtree)
