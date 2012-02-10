@@ -1,6 +1,6 @@
 \input texinfo   @c -*-texinfo-*-
 @c
-@c $Id: ede.texi,v 1.30 2010/07/25 14:12:32 zappo Exp $
+@c $Id: ede.texi,v 1.30 2010-07-25 14:12:32 zappo Exp $
 @c
 @setfilename ede.info
 @settitle Emacs Development Environment

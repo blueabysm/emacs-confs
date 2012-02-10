@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003, 2004, 2007 Richard Kim
 
-;; Author: root <root@pluto-laptop>
-;; Created: 2011-04-26 11:31:13+0800
+;; Author:  <wanglei@dev>
+;; Created: 2012-02-10 16:26:47+0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

@@ -1,6 +1,6 @@
 \input texinfo   @c -*-texinfo-*-
 @c
-@c $Id: srecode.texi,v 1.24 2010/05/30 20:22:40 scymtym Exp $
+@c $Id: srecode.texi,v 1.24 2010-05-30 20:22:40 scymtym Exp $
 @c
 @c %**start of header
 @setfilename srecode.info

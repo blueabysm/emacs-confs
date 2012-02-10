@@ -6,7 +6,7 @@
 ## Author: David Ponce <david@dponce.com>
 ## Maintainer: CEDET developers <http://sf.net/projects/cedet>
 ## Created: 12 Sep 2003
-## X-RCS: $Id: Makefile,v 1.27 2010/04/23 00:04:39 zappo Exp $
+## X-RCS: $Id: Makefile,v 1.27 2010-04-23 00:04:39 zappo Exp $
 ##
 ## This program is free software; you can redistribute it and/or
 ## modify it under the terms of the GNU General Public License as
@@ -55,7 +55,7 @@ FIND=find
 #RM = rm -f
 
 ## INSTALL PATHS
-PREFIX=/usr/local
+PREFIX=$HOME
 
 INFO_DIR=$(PREFIX)/share/info
 

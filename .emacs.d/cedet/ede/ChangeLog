@@ -1,3 +1,29 @@
+2012-01-09 Eric M. Ludlam   <zappo@gnu.org>
+
+	* ede.el (ede-version) update to 1.0.1
+	(ede-project-directories, ede-directory-safe-p): New
+	option/function.
+	(ede-buffer-belongs-to-project-p): Check against project.
+	(ede-minor-mode): Disable EDE for buffers not in a project.
+	(ede-initialize-current-state): Don't load projects that aren't
+	safe. Check against the project autoloader for details.
+	(ede): Check directory for unloaded but unsafe projects, and offer
+	to add them.
+	(ede-check-project-directory): New.
+	(ede-new): Force project reload.
+	(ede-rescan-toplevel): Only rescan already loaded projects.
+	(ede-load-project-file): Expand path better.
+	Delegate loading the project to ede-auto.el.
+	(ede-parent-project,ede-current-project): Don't load projects.
+	(ede-target-parent): Short-cut with ede-object-project.
+
+	* ede-auto.el (ede-project-autoload): add safe-p slot.
+	(ede-project-class-files): Make Makefile and Automake projects
+	unsafe.  Make a risky variable.
+	(ede-project-autoload::ede-auto-load-project): New.
+
+	* ede-simple.el (ede-project-class-files) make unsafe autoload.
+
 2010-08-22  Eric M. Ludlam  <zappo@gnu.org>
 
 	* templates/ede-autoconf.srt: Comment fix.

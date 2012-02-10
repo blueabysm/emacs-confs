@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Eric M. Ludlam
 
-;; Author: root <root@pluto-laptop>
-;; Created: 2011-04-26 11:31:19+0800
+;; Author:  <wanglei@dev>
+;; Created: 2012-02-10 16:26:52+0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

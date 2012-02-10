@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002, 2003 Vladimir G. Sekissov
 
-;; Author: root <root@pluto-laptop>
-;; Created: 2011-04-26 11:31:21+0800
+;; Author:  <wanglei@dev>
+;; Created: 2012-02-10 16:26:54+0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

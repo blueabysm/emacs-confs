@@ -5,7 +5,7 @@
 (setq w3m-use-cookies t)
 (setq w3m-command-arguments '("-cookie" "-F"))
 ;; (setq w3m-display-inline-image t)
-(setq w3m-home-page "http://php.net")
+(setq w3m-home-page "about:blank")
 ;;	(setq w3m-home-page "http://www.google.com/ncr")
 (require 'w3m-load)
 
@@ -190,3 +190,4 @@
 ;; directory tree
 (autoload 'dirtree "dirtree" "Add directory to tree view" t)
 (global-set-key (kbd "C-x d") 'dirtree)
+

@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2002 David Ponce
 
-;; Author: root <root@pluto-laptop>
-;; Created: 2011-04-26 11:31:03+0800
+;; Author:  <wanglei@dev>
+;; Created: 2012-02-10 16:26:38+0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

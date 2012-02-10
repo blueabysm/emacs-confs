@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2005 Joakim Verona, Eric Ludlam
 
-;; Author: root <root@pluto-laptop>
-;; Created: 2011-04-26 11:31:15+0800
+;; Author:  <wanglei@dev>
+;; Created: 2012-02-10 16:26:48+0800
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
