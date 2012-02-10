@@ -191,3 +191,10 @@
 (autoload 'dirtree "dirtree" "Add directory to tree view" t)
 (global-set-key (kbd "C-x d") 'dirtree)
 
+;; ==============================================
+;; SQL Completion
+(require 'sql-completion)
+(setq sql-interactive-mode-hook
+      (lambda ()
+        (define-key sql-interactive-mode-map "\t" 'comint-dynamic-complete)
+        (sql-mysql-completion-init)))
