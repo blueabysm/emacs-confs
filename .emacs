@@ -153,7 +153,7 @@
 
 ;; ===============================================
 ;; settings of nxhtml
-;; (load "~/repos/emacs-confs/.emacs.d/nxhtml/autostart.el")
+;; (load "~/repos/emacs-confs/.emacs.d/nxhtml/autostart")
 ;; (setq mumamo-chunk-coloring 5)
 
 ;; ===============================================
