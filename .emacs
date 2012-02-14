@@ -1,3 +1,10 @@
+;; ===================================================
+;; global settings
+(display-time-mode 1)
+(setq display-time-day-and-date t)
+(setq display-time-use-mail-icon t)
+(setq display-time-interval 60)
+
 ;; settings of w3m
 ;; ===================================================
 ;; =======Temporary Disabled===========
@@ -198,3 +205,39 @@
       (lambda ()
         (define-key sql-interactive-mode-map "\t" 'comint-dynamic-complete)
         (sql-mysql-completion-init)))
+
+;; ===================================================
+;; auctex mode
+(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/autex")
+(load "auctex.el" nil t t)
+(require 'tex-mik)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+(add-hook 'LaTeX-mode-hook 'visual-line-mode)
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(setq reftex-plug-into-AUCTeX t)
+
+(require 'auto-complete-latex)
+(setq ac-l-dict-directory "~/repos/emacs-confs/.emacs.d/miscs/ac-l-dict/")
+(add-to-list 'ac-modes 'foo-mode)
+(add-hook 'foo-mode-hook 'ac-l-setup)
+
+(mapc (lambda (mode)
+        (add-hook 'LaTeX-mode-hook mode))
+      (list 'auto-fill-mode
+            'LaTeX-math-mode
+            'turn-on-reftex
+            'linum-mode))
+
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (setq TeX-auto-untabify t     ; remove all tabs before saving
+                  TeX-engine 'xetex       ; use xelatex default
+                  TeX-show-compilation t) ; display compilation windows
+            (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
+            (setq TeX-save-query nil)
+            (imenu-add-menubar-index)
+            (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
