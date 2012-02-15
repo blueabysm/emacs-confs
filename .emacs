@@ -206,6 +206,10 @@
         (define-key sql-interactive-mode-map "\t" 'comint-dynamic-complete)
         (sql-mysql-completion-init)))
 
+;; ==================================================
+;; unescape color chars from colordiff
+(add-hook 'diff-mode-hook '(lambda () (require 'ansi-color)(ansi-color-apply-on-region (point-min) (point-max))))
+
 ;; ===================================================
 ;; auctex mode
 (add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/autex")
