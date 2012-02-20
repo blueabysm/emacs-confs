@@ -242,5 +242,9 @@
                   TeX-show-compilation t) ; display compilation windows
             (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
             (setq TeX-save-query nil)
-            (imenu-add-menubar-index)
-            (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
+            (imenu-add-menubar-index)))
+
+;; ===================================================
+;; use ediff as the default diff command
+(eval-after-load "vc-hooks"
+  '(define-key vc-prefix-map "=" 'ediff-revision))
