@@ -212,7 +212,7 @@
 
 ;; ===================================================
 ;; auctex mode
-(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/autex")
+(add-to-list 'load-path "~/repos/emacs-confs/.emacs.d/auctex")
 (load "auctex.el" nil t t)
 (require 'tex-mik)
 (setq TeX-auto-save t)
