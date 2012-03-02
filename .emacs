@@ -248,3 +248,36 @@
 ;; use ediff as the default diff command
 (eval-after-load "vc-hooks"
   '(define-key vc-prefix-map "=" 'ediff-revision))
+
+;; ===================================================
+;; settings of ctags
+(setq path-to-ctags "/usr/bin/ctags")
+
+(defun create-tags (dir-name)
+  "Create TAGS file."
+  (interactive "DDirectory:")
+  (shell-command
+   (format "%s -f %s/TAGS -e -R %s" path-to-ctags dir-name (directory-file-name dir-name)))
+)
+
+;; ===================================================
+;; gnus configurations (not use ~/.gnus.el because I don't
+;; know how to specify .gnus directly into my repo dir
+
+;; read news group information
+(setq gnus-select-method '(nntp "news.newsfan.net"))
+(setq user-full-name "Lei Wang")
+(setq user-mail-address "blueabysm@gmail.com")
+
+(set-language-environment 'Chinese-GB)
+(setq gnus-default-charset 'chinese-iso-8bit
+      gnus-group-name-charset-group-alist '((".*" . cn-gb-2312))
+      gnus-summary-show-article-charset-alist
+      '((1 . cn-gb-2312)
+        (2 . gb18030)
+        (3 . chinese-iso-8bit)
+        (4 . gbk)
+        (5 . big5)
+        (6 . utf-8))
+      gnus-newsgroup-ignored-charsets
+      '(unknown-8bit x-unknown iso-8859-1))
