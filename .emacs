@@ -89,31 +89,31 @@
 ;; settings of bind key-shortcut to goto-line command
 (global-set-key (kbd "C-c g") 'goto-line)
 
-;; settings of CEDET
-;; ===================================================
-(load-file "~/repos/emacs-confs/.emacs.d/cedet/common/cedet.el")
+;; ;; settings of CEDET
+;; ;; ===================================================
+;; (load-file "~/repos/emacs-confs/.emacs.d/cedet/common/cedet.el")
 
-;; enable EDE mode
-(global-ede-mode 1)
+;; ;; enable EDE mode
+;; (global-ede-mode 1)
 
-;; enable semantic features
-(semantic-load-enable-gaudy-code-helpers)
-(global-semantic-idle-scheduler-mode 1)
-(global-semantic-idle-completions-mode 1)
-(global-semantic-idle-summary-mode 1)
+;; ;; enable semantic features
+;; (semantic-load-enable-gaudy-code-helpers)
+;; (global-semantic-idle-scheduler-mode 1)
+;; (global-semantic-idle-completions-mode 1)
+;; (global-semantic-idle-summary-mode 1)
 
-;; work with customerized include folder
-(semantic-add-system-include "/usr/local/include" 'c++-mode)
-(semantic-add-system-include "/usr/local/include" 'c-mode)
+;; ;; work with customerized include folder
+;; (semantic-add-system-include "/usr/local/include" 'c++-mode)
+;; (semantic-add-system-include "/usr/local/include" 'c-mode)
 
-;; name completions and display tags & classes information
-(require 'semantic-ia)
+;; ;; name completions and display tags & classes information
+;; (require 'semantic-ia)
 
-;; work with gcc
-(require 'semantic-gcc)
+;; ;; work with gcc
+;; (require 'semantic-gcc)
 
-;; load semanticdb
-(require 'semanticdb)
+;; ;; load semanticdb
+;; (require 'semanticdb)
 
 (global-set-key (kbd "C-x g") 'semantic-ia-fast-jump)
 ;; settings of linum-mode
@@ -269,7 +269,6 @@
 (setq user-full-name "Lei Wang")
 (setq user-mail-address "blueabysm@gmail.com")
 
-(set-language-environment 'Chinese-GB)
 (setq gnus-default-charset 'chinese-iso-8bit
       gnus-group-name-charset-group-alist '((".*" . cn-gb-2312))
       gnus-summary-show-article-charset-alist
@@ -281,3 +280,11 @@
         (6 . utf-8))
       gnus-newsgroup-ignored-charsets
       '(unknown-8bit x-unknown iso-8859-1))
+
+;; ==============================================
+;; jabber for google talk
+(require 'jabber-autoloads)
+(setq jabber-account-list
+      '(("blueabysm@gmail.com"
+         (:network-server . "talk.google.com")
+         (:connection-type . ssl))))
