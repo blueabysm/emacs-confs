@@ -160,14 +160,15 @@
 
 ;; ===============================================
 ;; settings of nxhtml
-;; (load "~/repos/emacs-confs/.emacs.d/nxhtml/autostart")
-;; (setq mumamo-chunk-coloring 5)
+(load "~/repos/emacs-confs/.emacs.d/nxhtml/autostart")
+(nxhtml-mumamo-mode)
+(setq mumamo-chunk-coloring 5)
 
 ;; ===============================================
 ;; settings of folding mode
-(autoload 'folding-mode "folding" "Folding mode" t)
-(autoload 'turn-off-folding-mode "folding" "Folding mode" t)
-(autoload 'turn-on-folding-mode "folding" "Folding mode" t)
+;; (autoload 'folding-mode "folding" "Folding mode" t)
+;; (autoload 'turn-off-folding-mode "folding" "Folding mode" t)
+;; (autoload 'turn-on-folding-mode "folding" "Folding mode" t)
 
 ;; ===============================================
 ;; anything
@@ -175,7 +176,7 @@
 
 ;; ==============================================
 ;; tail
-(require 'tail)
+;; (require 'tail)
 
 ;; ===============================================
 ;; faster prev-next frame
@@ -190,8 +191,8 @@
 
 ;; ===================================================
 ;; smooth scroll
-(require 'smooth-scroll)
-(setq scroll-step 1) ;; keyboard scroll one line at a time
+;; (require 'smooth-scroll)
+;; (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; ===============================================
 ;; directory tree
@@ -208,7 +209,7 @@
 
 ;; ==================================================
 ;; unescape color chars from colordiff
-(add-hook 'diff-mode-hook '(lambda () (require 'ansi-color)(ansi-color-apply-on-region (point-min) (point-max))))
+;; (add-hook 'diff-mode-hook '(lambda () (require 'ansi-color)(ansi-color-apply-on-region (point-min) (point-max))))
 
 ;; ===================================================
 ;; auctex mode
@@ -251,35 +252,35 @@
 
 ;; ===================================================
 ;; settings of ctags
-(setq path-to-ctags "/usr/bin/ctags")
+;; (setq path-to-ctags "/usr/bin/ctags")
 
-(defun create-tags (dir-name)
-  "Create TAGS file."
-  (interactive "DDirectory:")
-  (shell-command
-   (format "%s -f %s/TAGS -e -R %s" path-to-ctags dir-name (directory-file-name dir-name)))
-)
+;; (defun create-tags (dir-name)
+;;   "Create TAGS file."
+;;   (interactive "DDirectory:")
+;;   (shell-command
+;;    (format "%s -f %s/TAGS -e -R %s" path-to-ctags dir-name (directory-file-name dir-name)))
+;; )
 
 ;; ===================================================
 ;; gnus configurations (not use ~/.gnus.el because I don't
 ;; know how to specify .gnus directly into my repo dir
 
 ;; read news group information
-(setq gnus-select-method '(nntp "news.newsfan.net"))
-(setq user-full-name "Lei Wang")
-(setq user-mail-address "blueabysm@gmail.com")
+;; (setq gnus-select-method '(nntp "news.newsfan.net"))
+;; (setq user-full-name "Lei Wang")
+;; (setq user-mail-address "blueabysm@gmail.com")
 
-(setq gnus-default-charset 'chinese-iso-8bit
-      gnus-group-name-charset-group-alist '((".*" . cn-gb-2312))
-      gnus-summary-show-article-charset-alist
-      '((1 . cn-gb-2312)
-        (2 . gb18030)
-        (3 . chinese-iso-8bit)
-        (4 . gbk)
-        (5 . big5)
-        (6 . utf-8))
-      gnus-newsgroup-ignored-charsets
-      '(unknown-8bit x-unknown iso-8859-1))
+;; (setq gnus-default-charset 'chinese-iso-8bit
+;;       gnus-group-name-charset-group-alist '((".*" . cn-gb-2312))
+;;       gnus-summary-show-article-charset-alist
+;;       '((1 . cn-gb-2312)
+;;         (2 . gb18030)
+;;         (3 . chinese-iso-8bit)
+;;         (4 . gbk)
+;;         (5 . big5)
+;;         (6 . utf-8))
+;;       gnus-newsgroup-ignored-charsets
+;;       '(unknown-8bit x-unknown iso-8859-1))
 
 ;; ==============================================
 ;; jabber for google talk
